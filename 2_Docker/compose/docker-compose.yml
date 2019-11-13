@@ -1,0 +1,12 @@
+version: '3'
+services:
+  hello:
+    container_name: hello
+    image: zeletrik/hello-app-cn:0.0.2
+    ports:
+      - "5000:8080"
+  name:
+    container_name: name
+    image: zeletrik/name-app-cn:0.0.2
+    ports:
+      - "3000:8080"

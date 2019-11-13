@@ -1,0 +1,47 @@
+[
+    {
+        "TableName": "Movies",
+        "KeySchema": [
+            {
+                "AttributeName": "movie_ID",
+                "KeyType": "HASH" 
+            }
+        ],
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "movie_ID",
+                "AttributeType": "S"
+            }
+        ]
+    },
+    {
+        "TableName": "Users",
+        "KeySchema": [
+            {
+                "AttributeName": "user_ID",
+                "KeyType": "HASH"
+            }
+        ],
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "user_ID",
+                "AttributeType": "S"
+            }
+        ]
+    },
+    {
+        "TableName": "Favorites",
+        "KeySchema": [
+            {
+                "AttributeName": "user_ID",
+                "KeyType": "HASH"
+            }
+        ],
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "user_ID",
+                "AttributeType": "S"
+            }
+        ]
+    }
+]

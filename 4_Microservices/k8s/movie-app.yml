@@ -1,0 +1,52 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: movie-deployment
+  labels:
+    app: movie
+    tier: service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: movie
+      tier: service
+  template:
+    metadata:
+      labels:
+        app: movie
+        tier: service
+    spec:
+      containers:
+      - name: movie-app 
+        image: zeletrik/movie-app-cn-demo:0.0.1
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Never
+        env:
+        - name: JAEGER_SERVICE_NAME
+          value: movie-app
+        - name: JAEGER_AGENT_HOST
+          value: jaeger-agent
+        - name: JAEGER_SAMPLER_TYPE
+          value: const
+        - name: JAEGER_SAMPLER_PARAM
+          value: "1"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: movie-service
+  namespace: default
+  labels:
+    app: movie
+    tier: service
+spec:
+  type: NodePort
+  selector:
+    app: movie
+    tier: service
+  ports:
+  - name: api
+    port: 3000
+    targetPort: 3000

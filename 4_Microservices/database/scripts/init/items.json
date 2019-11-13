@@ -1,0 +1,92 @@
+[
+    {
+        "TableName": "Movies",
+        "Items": [
+            {
+                "movie_ID": "6e8257a4-aba7-4bc6-95d2-dea51239a99a",
+                "title": "Joker",
+                "release": "2019-10-04",
+                "stars": [
+                    "Joaquin Phoenix",
+                    "Robert De Niro",
+                    "Zazie Beetz"
+                ]
+            },
+            {
+                "movie_ID": "54fd74e8-982d-4fe8-8964-208dba33ef13",
+                "title": "Doctor Sleep",
+                "release": "2019-10-31",
+                "stars": [
+                    "Ewan McGregor", 
+                    "Rebecca Ferguson", 
+                    "Kyliegh Curran"
+                ]
+            },
+            {
+                "movie_ID": "dd22582b-f2ce-4d1d-a517-208d6718d294",
+                "title": "Terminator: Dark Fate",
+                "release": "2019-10-23",
+                "stars": [
+                    "Linda Hamilton",
+                    "Arnold Schwarzenegger",
+                    "Mackenzie Davis"
+                ]
+            },
+            {
+                "movie_ID": "9acc571e-1eba-4867-89f0-14529df26f61",
+                "title": "Zombieland: Double Tap",
+                "release": "2019-10-18",
+                "stars": [
+                    "Woody Harrelson",
+                    "Jesse Eisenberg", 
+                    "Emma Stone"
+                ]
+            },
+            {
+                "movie_ID": "fd949579-d4f2-4e4f-9f69-3101edb57ff3",
+                "title": "Star Wars: The Rise of Skywalker",
+                "release": "2019-12-19",
+                "stars": [
+                    "Billie Lourd",
+                    "Daisy Ridley",
+                    "Adam Driver"
+                ]
+            }
+        ]
+    },
+    {
+        "TableName": "Users",
+        "Items": [
+            {
+                "user_ID": "98c22284-f455-41e3-8cea-36473ea65389",
+                "name": "John Doe",
+                "password": "czNjcmV0cDRzc3cwcmQ"
+            },
+            {
+                "user_ID": "4476fea9-3161-4961-a5de-34981b3a73a7",
+                "name": "Jane Doe",
+                "password": "cDRzc3dvcmRzZWNyM3Q"
+            }
+        ]
+    },
+    {
+        "TableName": "Favorites",
+        "Items": [
+            {
+                "user_ID": "98c22284-f455-41e3-8cea-36473ea65389",
+                "favorites": [
+                    "6e8257a4-aba7-4bc6-95d2-dea51239a99a",
+                    "fd949579-d4f2-4e4f-9f69-3101edb57ff3",
+                    "9acc571e-1eba-4867-89f0-14529df26f61"
+                ]
+            },
+            {
+                "user_ID": "4476fea9-3161-4961-a5de-34981b3a73a7",
+                "favorites": [
+                    "54fd74e8-982d-4fe8-8964-208dba33ef13",
+                    "6e8257a4-aba7-4bc6-95d2-dea51239a99a"
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,71 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: chain-service-monitor
+  labels:
+    release: prometheus-operator
+spec:
+  selector:
+    matchLabels:
+      app: chain
+      tier: service
+  endpoints:
+  - port: api
+    scheme: http
+    path: '/actuator/prometheus'
+    interval: 15s
+    honorLabels: false
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: movie-service-monitor
+  labels:
+    release: prometheus-operator
+spec:
+  selector:
+    matchLabels:
+      app: movie
+      tier: service
+  endpoints:
+  - port: api
+    scheme: http
+    path: '/actuator/prometheus'
+    interval: 15s
+    honorLabels: false
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: auth-service-monitor
+  labels:
+    release: prometheus-operator
+spec:
+  selector:
+    matchLabels:
+      app: auth
+      tier: service
+  endpoints:
+  - port: api
+    scheme: http
+    path: '/actuator/prometheus'
+    interval: 15s
+    honorLabels: false
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: favorite-service-monitor
+  labels:
+    release: prometheus-operator
+spec:
+  selector:
+    matchLabels:
+      app: favorite
+      tier: service
+  endpoints:
+  - port: api
+    scheme: http
+    path: '/actuator/prometheus'
+    interval: 15s
+    honorLabels: false
