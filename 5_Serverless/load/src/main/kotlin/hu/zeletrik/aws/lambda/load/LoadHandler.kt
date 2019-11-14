@@ -8,7 +8,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper
 
 data class HandlerInput(val movieId: String)
 
-class Handler {
+class LoadHandler {
     private val mapper = jacksonObjectMapper()
 
     fun load(input: InputStream, output: OutputStream) {

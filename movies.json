@@ -1,0 +1,18 @@
+[{
+    "title": "Avengers: Endgame",
+    "release": "2019-04-25",
+    "stars": [
+        "Robert Downey Jr.", 
+        "Chris Evans",
+        "Mark Ruffalo"
+    ]
+},
+{
+    "title": "Star Wars: The Rise of Skywalker",
+    "release": "2019-12-19",
+    "stars": [
+        "Billie Lourd",
+        "Daisy Ridley",
+        "Adam Driver"
+    ]
+}]
